@@ -24,6 +24,11 @@ $massive = include (__DIR__ . '/readFileFunc.php');
     <button type="submit">Оставить отзыв</button>
 </form>
 
+<form action="/picUps.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="myimage">
+    <button type="submit">Отправить</button>
+</form>
+
 
 </body>
 </html>
