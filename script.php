@@ -1,12 +1,14 @@
 <?php
-require (__DIR__ . '/readFileFunc.php');
-
 
 if (isset($_POST['textbook'])){
-    $intxt = file_put_contents(__DIR__ . '/questbook.txt', $_POST['textbook'], FILE_APPEND);
+    file_put_contents(__DIR__ . '/questbook.txt', '<br>' . $_POST['textbook'], FILE_APPEND);
 
-    $massive = readbook();
-    foreach ($massive as $value){
+    $massive2 = include (__DIR__ . '/readFileFunc.php');
+
+    foreach ($massive2 as $value) {
         echo $value . '<br>';
     }
 }
+
+
+require __DIR__ . '/picScript.php';

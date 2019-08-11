@@ -10,24 +10,19 @@
 <body>
 
 <?php
-require (__DIR__ . '/readFileFunc.php');
 
+$massive = include (__DIR__ . '/readFileFunc.php');
 
-$massive = readbook();
-foreach ($massive as $value){
- echo $value . '<br>';
-}
-
+    foreach ($massive as $value){
+       echo $value . '<br>';
+    }
 
 ?>
 
-
-<form action="<?php __DIR__ ?>/script.php" method="post">
+<form action="/script.php" method="post">
     <input type="text" name="textbook">
     <button type="submit">Оставить отзыв</button>
 </form>
-
-
 
 
 </body>
