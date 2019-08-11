@@ -5,6 +5,6 @@
         $rf = file(__DIR__ . '/questbook.txt');
         return $rf;
     } else {
-        return 'Файл не найден';
+        return false;
     }
 
